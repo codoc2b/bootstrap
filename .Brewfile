@@ -22,7 +22,6 @@ brew "vim"
 brew "wget"
 brew "zsh"
 
-cask "boostnote"
 cask "chrysalis"
 cask "discord"
 cask "docker"
