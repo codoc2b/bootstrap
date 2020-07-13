@@ -1,0 +1,4 @@
+# Patterns Git ignores in all situations
+
+# macOS
+.DS_Store

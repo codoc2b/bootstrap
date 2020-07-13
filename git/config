@@ -1,0 +1,9 @@
+[user]
+  name = codoc2b
+  email = 68234257+codoc2b@users.noreply.github.com
+
+[color]
+  ui = true
+
+[ghq]
+  root = ~/ghq
