@@ -1,0 +1,5 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.renderWhitespace": "all",
+    "workbench.settings.editor": "json"
+}
