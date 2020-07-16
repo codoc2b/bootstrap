@@ -213,6 +213,8 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 # Disable all animations
 defaults write com.apple.finder DisableAllAnimations -bool true
+# Keep folders on top in windows when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # Preferences: Sidebar: Favorites: AirDrop, Applications, Documents, Downloads, HOME
 # Preferences: Sidebar: Locations: None
 # View: Show View Options: Show Library Folder
