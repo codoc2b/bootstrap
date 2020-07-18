@@ -6,6 +6,7 @@ tap "homebrew/core"
 
 brew "anyenv"
 brew "bat"
+brew "curl"
 brew "direnv"
 brew "docker"
 brew "fzf"

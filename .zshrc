@@ -43,3 +43,4 @@ export FZF_DEFAULT_OPTS='
 '
 export PURE_PROMPT_SYMBOL=$
 export XDG_CONFIG_HOME=$HOME/.config
+export PATH="/usr/local/opt/curl/bin:$PATH"
