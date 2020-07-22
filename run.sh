@@ -264,6 +264,14 @@ do
   ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
 done
 
+# Install vscode extensions
+if command -v code 1>/dev/null; then
+  cat vscode/extensions | while read line
+  do
+    code --install-extension $line
+  done
+fi
+
 # Install Zinit
 if [ ! -e "$HOME/.zinit" ]; then
   git clone https://github.com/zdharma/zinit.git "$HOME/.zinit/bin"
