@@ -257,6 +257,12 @@ if [ ! -e "$HOME/.config/anyenv" ]; then
   anyenv install --init
 fi
 
+# Link iterm dynamic profile
+for i in iterm/*
+do
+  ln -sfv "$base/$i" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/$(basename $i)"
+done
+
 # Link vscode config files
 for v in vscode/*
 do
