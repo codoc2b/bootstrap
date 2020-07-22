@@ -4,5 +4,6 @@
     "files.trimTrailingWhitespace": true,
     "workbench.settings.editor": "json",
     "workbench.colorTheme": "GitHub Dark",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDelete": false
 }
