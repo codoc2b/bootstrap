@@ -243,6 +243,7 @@ done
 # Link vscode config files
 for v in vscode/*
 do
+  [ "$(basename $v)" = "extensions" ] && continue
   ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
 done
 

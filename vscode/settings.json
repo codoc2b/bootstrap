@@ -1,5 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "editor.renderWhitespace": "all",
-    "workbench.settings.editor": "json"
+    "workbench.settings.editor": "json",
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.iconTheme": "material-icon-theme"
 }
