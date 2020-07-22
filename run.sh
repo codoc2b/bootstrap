@@ -240,13 +240,6 @@ do
   ln -sfv "$base/$g" "$HOME/.config/$g"
 done
 
-# Link vscode config files
-for v in vscode/*
-do
-  [ "$(basename $v)" = "extensions" ] && continue
-  ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
-done
-
 # Install latest Homebrew
 if ! command -v brew 1>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -263,6 +256,13 @@ brew doctor
 if [ ! -e "$HOME/.config/anyenv" ]; then
   anyenv install --init
 fi
+
+# Link vscode config files
+for v in vscode/*
+do
+  [ "$(basename $v)" = "extensions" ] && continue
+  ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
+done
 
 # Install Zinit
 if [ ! -e "$HOME/.zinit" ]; then
