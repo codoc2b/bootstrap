@@ -5,5 +5,7 @@
     "workbench.settings.editor": "json",
     "workbench.colorTheme": "GitHub Dark",
     "workbench.iconTheme": "material-icon-theme",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.fontFamily": "HackGen",
+    "editor.fontSize": 16
 }
