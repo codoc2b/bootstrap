@@ -2,6 +2,12 @@
   name = codoc2b
   email = 68234257+codoc2b@users.noreply.github.com
 
+[core]
+  editor = code --wait
+
+[init]
+  defaultBranch = main
+
 [color]
   ui = true
 
