@@ -7,5 +7,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDelete": false,
     "editor.fontFamily": "HackGen",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16
 }
