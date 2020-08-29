@@ -32,6 +32,11 @@ brew bundle --global
 # Check system for potential problems
 brew doctor
 
+# Make .config dir
+if [ ! -e "$HOME/.config" ]; then
+  mkdir -p $HOME/.config
+fi
+
 # Install anyenv
 if [ ! -e "$HOME/.config/anyenv" ]; then
   anyenv install --init
@@ -43,7 +48,9 @@ if [ ! -e "$HOME/.zinit" ]; then
 fi
 
 # Link git config files to HOME/.config
-mkdir -p $HOME/.config/git
+if [ ! -e "$HOME/.config/git" ]; then
+  mkdir -p $HOME/.config/git
+fi
 for g in git/*
 do
   ln -sfv "$base/$g" "$HOME/.config/$g"
