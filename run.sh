@@ -176,6 +176,7 @@ defaults write com.apple.airplay showInMenuBarIfPresent -bool false
 # Energy Saver
 # Show Percentage: true
 defaults write com.apple.menuextra.battery ShowPercent YES
+# Turn display off after: 15 min
 
 # Date & Time
 # Clock: Time options: Display the time with seconds: true
