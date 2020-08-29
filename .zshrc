@@ -32,16 +32,4 @@ find_repo() {
 }
 zle -N find_repo && bindkey '^f' find_repo
 
-export FZF_DEFAULT_OPTS='
---ansi
---border
---color hl:108
---cycle
---height 75%
---layout=reverse
---multi
-'
-export XDG_CONFIG_HOME=$HOME/.config
-export PATH="/usr/local/opt/curl/bin:$PATH"
-
 eval "$(starship init zsh)"
