@@ -24,6 +24,7 @@ brew "vim"
 brew "wget"
 brew "zsh"
 
+cask "alfred"
 cask "authy"
 cask "chrysalis"
 cask "discord"
