@@ -30,6 +30,9 @@ zle -N down-line-or-beginning-search
 bindkey '^[[A' up-line-or-beginning-search
 bindkey '^[[B' down-line-or-beginning-search
 
+# Colorize ls command
+alias l='ls -laG'
+
 # Find ghq repos with Ctrl+f
 find_repo() {
   declare -r repo="$(ghq list > /dev/null | fzf-tmux --reverse +m)"
