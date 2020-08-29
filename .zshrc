@@ -11,6 +11,9 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
 
+# Share history with other terminals
+setopt share_history
+
 # Case insensitive completions
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # Disable entering Tab
