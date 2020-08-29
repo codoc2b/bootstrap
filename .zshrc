@@ -14,6 +14,9 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-complet
 # Share history with other terminals
 setopt share_history
 
+# Don't show duplicated history
+setopt histignorealldups
+
 # Case insensitive completions
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # Disable entering Tab
