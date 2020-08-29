@@ -12,6 +12,70 @@ if ! command -v defaults 1>/dev/null; then
   exit 0
 fi
 
+# Link dotfiles to HOME
+for d in .??*
+do
+  [ "$d" = ".git" ] && continue
+  [ "$d" = ".DS_Store" ] && continue
+  ln -sfv "$base/$d" "$HOME/$d"
+done
+
+# Install latest Homebrew
+if ! command -v brew 1>/dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+brew update
+
+# Install or upgrade dependencies in Brewfile
+brew bundle --global
+
+# Check system for potential problems
+brew doctor
+
+# Install anyenv
+if [ ! -e "$HOME/.config/anyenv" ]; then
+  anyenv install --init
+fi
+
+# Install Zinit
+if [ ! -e "$HOME/.zinit" ]; then
+  git clone https://github.com/zdharma/zinit.git "$HOME/.zinit/bin"
+fi
+
+# Link git config files to HOME/.config
+mkdir -p $HOME/.config/git
+for g in git/*
+do
+  ln -sfv "$base/$g" "$HOME/.config/$g"
+done
+
+# Link iterm dynamic profile
+for i in iterm/*
+do
+  ln -sfv "$base/$i" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/$(basename $i)"
+done
+
+# Link vscode config files
+for v in vscode/*
+do
+  [ "$(basename $v)" = "extensions" ] && continue
+  ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
+done
+
+# Install vscode extensions
+if command -v code 1>/dev/null; then
+  cat vscode/extensions | while read line
+  do
+    code --install-extension $line
+  done
+fi
+
+# Change shell to zsh installed by Homebrew
+if ! grep $(command -v zsh) /etc/shells > /dev/null 2>&1; then
+  sudo sh -c "echo $(command -v zsh) >> /etc/shells"
+  sudo chsh -s $(command -v zsh) $USER
+fi
+
 # Remove all from Dock
 defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock persistent-others -array
@@ -225,70 +289,6 @@ for app in Finder Dock
 do
   killall "$app" > /dev/null 2>&1
 done
-
-# Link dotfiles to HOME
-for d in .??*
-do
-  [ "$d" = ".git" ] && continue
-  [ "$d" = ".DS_Store" ] && continue
-  ln -sfv "$base/$d" "$HOME/$d"
-done
-
-# Link git config files to HOME/.config
-mkdir -p $HOME/.config/git
-for g in git/*
-do
-  ln -sfv "$base/$g" "$HOME/.config/$g"
-done
-
-# Install latest Homebrew
-if ! command -v brew 1>/dev/null; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
-brew update
-
-# Install or upgrade dependencies in Brewfile
-brew bundle --global
-
-# Check system for potential problems
-brew doctor
-
-# Install anyenv
-if [ ! -e "$HOME/.config/anyenv" ]; then
-  anyenv install --init
-fi
-
-# Link iterm dynamic profile
-for i in iterm/*
-do
-  ln -sfv "$base/$i" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/$(basename $i)"
-done
-
-# Link vscode config files
-for v in vscode/*
-do
-  [ "$(basename $v)" = "extensions" ] && continue
-  ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
-done
-
-# Install vscode extensions
-if command -v code 1>/dev/null; then
-  cat vscode/extensions | while read line
-  do
-    code --install-extension $line
-  done
-fi
-
-# Install Zinit
-if [ ! -e "$HOME/.zinit" ]; then
-  git clone https://github.com/zdharma/zinit.git "$HOME/.zinit/bin"
-fi
-
-# Change shell to zsh installed by Homebrew
-if ! grep $(command -v zsh) /etc/shells > /dev/null 2>&1; then
-  sudo sh -c "echo $(command -v zsh) >> /etc/shells"
-  sudo chsh -s $(command -v zsh) $USER
-fi
 
 echo
 echo "Bootstrap completed! Restart to reflect all changes"
