@@ -1,0 +1,9 @@
+add_newline = false
+
+[character]
+symbol = "$"
+
+[cmd_duration]
+min_time = 1_000
+show_milliseconds = true
+prefix = ""

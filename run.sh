@@ -56,6 +56,9 @@ do
   ln -sfv "$base/$g" "$HOME/.config/$g"
 done
 
+# Link starship config file to HOME/.config
+ln -sfv "$base/starship.toml" "$HOME/.config/starship.toml"
+
 # Link iterm dynamic profile
 for i in iterm/*
 do

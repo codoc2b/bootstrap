@@ -11,10 +11,6 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zdharma/history-search-multi-word
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
 
-# Load Pure zsh prompt
-zinit ice pick"async.zsh" src"pure.zsh"
-zinit light sindresorhus/pure
-
 # Case insensitive completions
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # Disable entering Tab
@@ -41,6 +37,7 @@ export FZF_DEFAULT_OPTS='
 --layout=reverse
 --multi
 '
-export PURE_PROMPT_SYMBOL=$
 export XDG_CONFIG_HOME=$HOME/.config
 export PATH="/usr/local/opt/curl/bin:$PATH"
+
+eval "$(starship init zsh)"
