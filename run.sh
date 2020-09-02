@@ -37,9 +37,10 @@ if [ ! -e "$HOME/.config" ]; then
   mkdir -p $HOME/.config
 fi
 
-# Install anyenv
+# Install anyenv and its plugins
 if [ ! -e "$HOME/.config/anyenv" ]; then
   anyenv install --init
+  git clone https://github.com/znz/anyenv-git.git ~/.anyenv/plugins/anyenv-git
 fi
 
 # Install Zinit
