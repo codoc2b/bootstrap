@@ -43,6 +43,11 @@ if [ ! -e "$HOME/.config/anyenv" ]; then
   git clone https://github.com/znz/anyenv-git.git ~/.anyenv/plugins/anyenv-git
 fi
 
+# Install pyenv
+if [ ! -e "$HOME/.anyenv/envs/pyenv" ]; then
+  anyenv install pyenv
+fi
+
 # Install Zinit
 if [ ! -e "$HOME/.zinit" ]; then
   git clone https://github.com/zdharma/zinit.git "$HOME/.zinit/bin"
