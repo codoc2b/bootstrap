@@ -30,7 +30,7 @@ brew update
 brew bundle --global
 
 # Check system for potential problems
-brew doctor
+env PATH=${PATH//$(pyenv root)\/shims:/} brew doctor
 
 # Make .config dir
 if [ ! -e "$HOME/.config" ]; then

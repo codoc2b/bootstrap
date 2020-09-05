@@ -33,6 +33,9 @@ bindkey '^[[B' down-line-or-beginning-search
 # Colorize ls command
 alias l='ls -laG'
 
+# Avoid brew doctor warning due to pyenv
+alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
+
 # Find ghq repos with Ctrl+f
 find_repo() {
   declare -r repo="$(ghq list > /dev/null | fzf-tmux --reverse +m)"
