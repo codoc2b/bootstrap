@@ -8,4 +8,5 @@ export FZF_DEFAULT_OPTS='
 --multi
 '
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH=$HOME/.poetry/bin:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
