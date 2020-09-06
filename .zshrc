@@ -45,4 +45,5 @@ find_repo() {
 zle -N find_repo && bindkey '^f' find_repo
 
 eval "$(anyenv init -)"
+eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"

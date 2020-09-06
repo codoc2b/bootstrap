@@ -1,3 +1,4 @@
+export EDITOR='code'
 export FZF_DEFAULT_OPTS='
 --ansi
 --border
