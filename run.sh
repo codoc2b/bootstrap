@@ -30,7 +30,11 @@ brew update
 brew bundle --global
 
 # Check system for potential problems
-env PATH=${PATH//$(pyenv root)\/shims:/} brew doctor
+if [ ! -e "$HOME/.anyenv/envs/pyenv" ]; then
+  brew doctor
+else
+  env PATH=${PATH//$(pyenv root)\/shims:/} brew doctor
+fi
 
 # Make .config dir
 if [ ! -e "$HOME/.config" ]; then
@@ -71,17 +75,21 @@ done
 ln -sfv "$base/starship.toml" "$HOME/.config/starship.toml"
 
 # Link iterm dynamic profile
-for i in iterm/*
-do
-  ln -sfv "$base/$i" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/$(basename $i)"
-done
+if [ -e "$HOME/Library/Application Support/iTerm2/DynamicProfiles" ]; then
+  for i in iterm/*
+  do
+    ln -sfv "$base/$i" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/$(basename $i)"
+  done
+fi
 
 # Link vscode config files
-for v in vscode/*
-do
-  [ "$(basename $v)" = "extensions" ] && continue
-  ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
-done
+if [ -e "$HOME/Library/Application Support/Code/User" ]; then
+  for v in vscode/*
+  do
+    [ "$(basename $v)" = "extensions" ] && continue
+    ln -sfv "$base/$v" "$HOME/Library/Application Support/Code/User/$(basename $v)"
+  done
+fi
 
 # Install vscode extensions
 if command -v code 1>/dev/null; then
