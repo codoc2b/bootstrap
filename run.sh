@@ -220,38 +220,6 @@ defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 61
   </dict>
 </dict>
 "
-# Shortcuts: Spotlight: Show Spotlight search: Ctrl+Space
-# defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 64 "
-# <dict>
-#   <key>enabled</key><true/>
-#   <key>value</key>
-#   <dict>
-#     <key>type</key><string>standard</string>
-#     <key>parameters</key>
-#     <array>
-#       <integer>32</integer>
-#       <integer>49</integer>
-#       <integer>262144</integer>
-#     </array>
-#   </dict>
-# </dict>
-# "
-# Shortcuts: Spotlight: Show Finder search window: Ctrl+Option+Space
-# defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 65 "
-# <dict>
-#   <key>enabled</key><true/>
-#   <key>value</key>
-#   <dict>
-#     <key>type</key><string>standard</string>
-#     <key>parameters</key>
-#     <array>
-#       <integer>32</integer>
-#       <integer>49</integer>
-#       <integer>786432</integer>
-#     </array>
-#   </dict>
-# </dict>
-# "
 # Input Sources: Add Google Japanese IME
 # defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = "com.google.inputmethod.Japanese"; InputSourceKind = "Keyboard Input Method"; }'
 
