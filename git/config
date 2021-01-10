@@ -13,3 +13,6 @@
 
 [ghq]
   root = ~/ghq
+
+[pull]
+  ff = only
