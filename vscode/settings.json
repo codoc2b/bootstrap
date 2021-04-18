@@ -1,13 +1,13 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.renderWhitespace": "all",
-    "files.trimTrailingWhitespace": true,
-    "workbench.settings.editor": "json",
-    "workbench.colorTheme": "GitHub Dark",
-    "workbench.iconTheme": "material-icon-theme",
-    "explorer.confirmDelete": false,
     "editor.fontFamily": "HackGen",
     "editor.fontSize": 16,
+    "editor.renderWhitespace": "all",
+    "explorer.confirmDelete": false,
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
     "terminal.integrated.fontSize": 16,
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.editor": "json",
     "workbench.startupEditor": "none"
 }
