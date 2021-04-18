@@ -1,6 +1,8 @@
 {
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "HackGen",
     "editor.fontSize": 16,
+    "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
