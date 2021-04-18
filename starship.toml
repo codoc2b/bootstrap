@@ -7,3 +7,8 @@ error_symbol = "[\\$](bold red)"
 [cmd_duration]
 min_time = 1_000
 show_milliseconds = true
+
+[kubernetes]
+disabled = false
+style = "blue bold"
+format = '[($symbol $content \($namespace\))]($style)'
