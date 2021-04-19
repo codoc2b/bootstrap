@@ -11,4 +11,4 @@ show_milliseconds = true
 [kubernetes]
 disabled = false
 style = "blue bold"
-format = '[ ($symbol$context\($namespace\)) ]($style)'
+format = '[($symbol$context\($namespace\)) ]($style)'
