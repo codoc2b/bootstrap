@@ -57,6 +57,11 @@ if [ ! -e "$HOME/.poetry/bin/poetry" ]; then
   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 fi
 
+# Install goenv
+if [ ! -e "$HOME/.anyenv/envs/goenv" ]; then
+  anyenv install goenv
+fi
+
 # Install Zinit
 if [ ! -e "$HOME/.zinit" ]; then
   git clone https://github.com/zdharma/zinit.git "$HOME/.zinit/bin"
