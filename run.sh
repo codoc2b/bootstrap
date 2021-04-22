@@ -62,6 +62,11 @@ if [ ! -e "$HOME/.anyenv/envs/goenv" ]; then
   anyenv install goenv
 fi
 
+# Install tfenv
+if [ ! -e "$HOME/.anyenv/envs/tfenv" ]; then
+  anyenv install tfenv
+fi
+
 # Install Zinit
 if [ ! -e "$HOME/.zinit" ]; then
   git clone https://github.com/zdharma/zinit.git "$HOME/.zinit/bin"
