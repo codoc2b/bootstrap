@@ -4,6 +4,7 @@ docsmsft.docs-markdown
 docsmsft.docs-preview
 eamodio.gitlens
 GitHub.github-vscode-theme
+golang.go
 mechatroner.rainbow-csv
 mhutchie.git-graph
 ms-azuretools.vscode-docker
