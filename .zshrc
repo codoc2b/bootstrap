@@ -13,17 +13,13 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-complet
 
 # Share history with other terminals
 setopt share_history
-
 # Don't show duplicated history
 setopt hist_ignore_dups
 setopt hist_ignore_all_dups
-
 # Don't show commands starting with space
 setopt hist_ignore_space
-
 # Don't show history command itself
 setopt hist_no_store
-
 # Reduce extra spaces
 setopt hist_reduce_blanks
 
@@ -42,7 +38,6 @@ bindkey '^[[B' down-line-or-beginning-search
 
 # Colorize ls command
 alias l='ls -laG'
-
 # Avoid brew doctor warning due to pyenv
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 
