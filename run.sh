@@ -67,6 +67,11 @@ if [ ! -e "$HOME/.anyenv/envs/tfenv" ]; then
   anyenv install tfenv
 fi
 
+# Install rustup
+if [ ! -e "$HOME/.cargo" ]; then
+  curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
+fi
+
 # Install Zinit
 if [ ! -e "$HOME/.zinit" ]; then
   git clone https://github.com/zdharma/zinit.git "$HOME/.zinit/bin"
