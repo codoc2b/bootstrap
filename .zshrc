@@ -36,6 +36,9 @@ zle -N down-line-or-beginning-search
 bindkey '^[[A' up-line-or-beginning-search
 bindkey '^[[B' down-line-or-beginning-search
 
+# Remove duplicates in PATH
+typeset -U PATH
+
 # Colorize ls command
 alias l='ls -laG'
 # Avoid brew doctor warning due to pyenv
