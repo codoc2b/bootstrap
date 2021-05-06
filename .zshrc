@@ -40,7 +40,7 @@ bindkey '^[[B' down-line-or-beginning-search
 typeset -U PATH
 
 # Colorize ls command
-alias l='ls -laG'
+alias l='exa -al'
 # Avoid brew doctor warning due to pyenv
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 
