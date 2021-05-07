@@ -40,7 +40,9 @@ bindkey '^[[B' down-line-or-beginning-search
 typeset -U PATH
 
 # Colorize ls command
-alias l='exa -al'
+alias ls='exa -al'
+# Colorize cat command
+alias cat='bat -P --style plain'
 # Avoid brew doctor warning due to pyenv
 alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew"
 
