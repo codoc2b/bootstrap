@@ -13,4 +13,4 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.cargo/env:$PATH"
 export SAVEHIST=100000
-export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CONFIG_HOME="$HOME/.config"
