@@ -40,7 +40,7 @@ bindkey '^[[B' down-line-or-beginning-search
 typeset -U PATH
 
 # Colorize ls command
-alias ls='exa -al'
+alias l='exa -al'
 # Colorize cat command
 alias cat='bat -P --style plain'
 # Avoid brew doctor warning due to pyenv
