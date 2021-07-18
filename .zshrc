@@ -22,6 +22,8 @@ setopt hist_ignore_space
 setopt hist_no_store
 # Reduce extra spaces
 setopt hist_reduce_blanks
+HISTSIZE=10000
+SAVEHIST=100000
 
 # Case insensitive completions
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
