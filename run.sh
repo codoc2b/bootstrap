@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+set -eux
 
 # Get base dir path then move to there
 base=$(cd $(dirname $0) && pwd)
