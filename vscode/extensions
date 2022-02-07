@@ -4,6 +4,7 @@ docsmsft.docs-markdown
 eamodio.gitlens
 GitHub.github-vscode-theme
 golang.go
+hashicorp.terraform
 mechatroner.rainbow-csv
 mhutchie.git-graph
 ms-azuretools.vscode-docker
@@ -11,6 +12,8 @@ ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 PKief.material-icon-theme
 redhat.vscode-yaml
 rust-lang.rust
