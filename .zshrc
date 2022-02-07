@@ -22,7 +22,7 @@ setopt hist_ignore_space
 setopt hist_no_store
 # Reduce extra spaces
 setopt hist_reduce_blanks
-HISTSIZE=10000
+HISTSIZE=100000
 SAVEHIST=100000
 
 # Case insensitive completions
