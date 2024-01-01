@@ -89,14 +89,6 @@ done
 # Link starship config file to HOME/.config
 ln -sfv "$base/starship.toml" "$HOME/.config/starship.toml"
 
-# Link iterm dynamic profile
-if [ -e "$HOME/Library/Application Support/iTerm2/DynamicProfiles" ]; then
-  for i in iterm/*
-  do
-    ln -sfv "$base/$i" "$HOME/Library/Application Support/iTerm2/DynamicProfiles/$(basename $i)"
-  done
-fi
-
 # Link vscode config files
 if [ -e "$HOME/Library/Application Support/Code/User" ]; then
   for v in vscode/*
